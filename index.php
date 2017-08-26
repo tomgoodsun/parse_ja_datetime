@@ -19,6 +19,7 @@ $list = array(
 );
 
 foreach ($list as $item) {
+    //var_export(DateTimeJp::parse($item));
     dump(sprintf(
         '%s is %s',
         $item,
