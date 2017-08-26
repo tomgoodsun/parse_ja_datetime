@@ -56,25 +56,13 @@ class DateTimeJp extends \DateTime
      */
     public static function getYearOffset($str)
     {
-        if (self::isFirstYearLabel(mb_substr($str, 0, 1))) {
+        if ('元' == mb_substr($str, 0, 1)) {
             return 0;
         }
 
-        //$ret = intval(self::getNumber($str)) - 1;
         $ret = intval($str) - 1;
         return $ret < 0 ? 0 : $ret;
 
-    }
-
-    /**
-     * 表記が「元年」かどうかをチェックする
-     *
-     * @param string $str
-     * @return bool
-     */
-    public static function isFirstYearLabel($str)
-    {
-        return '元' == $str;
     }
 
     /**
