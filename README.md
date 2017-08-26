@@ -4,7 +4,7 @@
 # 使い方
 
 ```php
-echo (new DateTimeJp('平成2年5月7日午前1時15分30秒')->format('Y-m-d H:i:s')
+echo (new DateTimeJp('平成2年5月7日午前1時15分30秒'))->format('Y-m-d H:i:s');
 // 1990-05-07 12:15:30
 
 var_export(DateTimeJp::parse('平成2年5月7日午前1時15分30秒'));
@@ -16,5 +16,4 @@ var_export(DateTimeJp::parse('平成2年5月7日午前1時15分30秒'));
 //   'minute' => '15',
 //   'second' => '30',
 // )
-
 ```
