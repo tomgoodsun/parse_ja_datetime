@@ -75,7 +75,7 @@ class DateTimeJp extends \DateTime
      */
     public static function to24hour($hour, $time_convention = null)
     {
-        if ('午後' !== $time_convention) {
+        if ('午後' === $time_convention) {
             return $hour + 12;
         }
         return $hour;
@@ -119,7 +119,7 @@ class DateTimeJp extends \DateTime
             }
         }
         $parts['year'] = intval(date('Y', $setting['timestamp'])) + self::getYearOffset($parts['year']);
-        $parts['hour'] = self::to24hour(array_key_exists(7, $matches) ? $matches[7] : null);
+        $parts['hour'] = self::to24hour($parts['hour'], array_key_exists(7, $matches) ? $matches[7] : null);
 
         return $parts;
     }
