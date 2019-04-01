@@ -19,6 +19,7 @@ class DateTimeJp extends \DateTime
     }
 
     private static $eraList = [
+        ['name_pattern' => ['令和', '令', 'R'], 'timestamp' => 1556668800],  // 2019-05-01,
         ['name_pattern' => ['平成', '平', 'H'], 'timestamp' => 600188400],  // 1989-01-08,
         ['name_pattern' => ['昭和', '昭', 'S'], 'timestamp' => -1357635600], // 1926-12-25'
         ['name_pattern' => ['大正', '大', 'T'], 'timestamp' => -1812186000], // 1912-07-30
